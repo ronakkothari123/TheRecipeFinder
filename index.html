@@ -23,7 +23,9 @@
                     <h2>Online Service by Ronak Kothari</h2>
                 </div>
             </div>
-            <input type="text" id="header-input" placeholder="Search Foods...">
+            <input type="text" placeholder="Search Foods...">
+            <input type="text" placeholder="Search Ingredients...">
+            <p>Logout</p>
             <div id="profile">
                 <img src="abstract-art.png" alt="Profile Picture" id="pfp">
                 <div id="profile-text">
@@ -33,6 +35,29 @@
                 <img src="more.svg" alt="" id="pfp-dropdown">
             </div>
         </div>
+        <div id="main-container">
+            <div id="form-container">
+                <img src="form.png" alt="Form Image">
+                <h1>Add Ingredients</h1>
+                <p>Using the Inputs, add ingredients to the list and select your cuisine and meal to tailor your results towards your needs.</p>
+                <div class="form-input">
+                    <input type="text" placeholder="Add Ingredients" id="form-input">
+                    <div class="form-img">
+                        <img src="pen.png" alt="Pen" onclick="createItem()">
+                    </div>
+                </div>
+                <div id="form-list-div">
+                    <div id="form-list">
+
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div id="list-container">
+                
+            </div>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
