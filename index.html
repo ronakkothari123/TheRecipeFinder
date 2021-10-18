@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Recipe Finder</title>
+    <title>The Recipe Finder - Tool by Ronak Kothari</title>
 
     <link rel="icon" href="sandwich.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="wrapper">
@@ -39,7 +39,7 @@
             <div id="form-container">
                 <img src="form.png" alt="Form Image">
                 <h1>Add Ingredients</h1>
-                <p>Using the Inputs, add ingredients to the list and select your cuisine and meal to tailor your results towards your needs.</p>
+                <p>Using the Inputs, add ingredients to the list and select your cuisine and meal to tailor your results towards your needs. Note: Please Provide Ingredients in their singular form.</p>
                 <div class="form-input">
                     <input type="text" placeholder="Add Ingredients" id="form-input">
                     <div class="form-img">
@@ -52,12 +52,24 @@
                     </div>
                 </div>
                 <div class="line"></div>
+                <button onclick="searchFoods()">Search</button>
             </div>
             <div id="list-container">
-                
+                <div id="list-desc">
+                    <img src="chemistry.png" alt="Chemistry or Something">
+                    <h1>List Results</h1>
+                    <p>The results that will appear to the right of this message once you hit the search button below will provide you with the best matching food items that you can make using the food and other information that you had inputed. Please note that you are free to use this service and you don't have to make the foods that are suggested by this algorithm, and to help better the results, use the form above or below to add more foods to this service. Thank you for using The Recipe Finder by Ronak Kothari.</p>
+                    <button>Add Food Items</button>
+                </div>
+                <div id="food-items-list">
+                    <div id="food-list"></div>
+                    <div id="food-description"></div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/foods.js"></script>
+    <script src="js/ingredients.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

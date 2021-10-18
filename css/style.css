@@ -22,6 +22,7 @@ body{
     align-items:center;
     padding:0 3vw;
     position:relative;
+    background:white;
 }
 
 #header-div{
@@ -69,13 +70,15 @@ body{
 
 #navbar > p{
     position:absolute;
-    right:17vw;
+    width:3.5vw;
+    right:19vw;
     background:lightgray;
     padding:1vmin;
     border-radius:1vmin;
     font-size:1.5vmin;
     cursor:pointer;
     transition-duration:150ms;
+    text-align:center;
 }
 
 #navbar > p:hover{
@@ -99,6 +102,7 @@ body{
     background:lightgray;
     padding:1.25vmin;
     border-radius:3vmin;
+    width:15vw;
 }
 
 #pfp{
@@ -155,25 +159,49 @@ body{
     align-items:center;
 }
 
-#form-container > img{
+#form-container > img, #list-desc > img{
     width:9vmin;
-    border-radius:6vmin;
-    border:1.5vmin solid lightgray;
+    border-radius:5.5vmin;
+    border:1.25vmin solid lightgray;
+    background:lightgray;
 }
 
-#form-container > h1{
+#form-container > h1, #list-desc > h1{
     font-size:1.75vw;
     margin:0;
     margin-top:1vh;
+    text-align:center;
 }
 
-#form-container > p{
+#form-container > p, #list-desc > p{
     font-size:0.75vw;
+    text-align:center;
     margin:0;
+}
+
+#form-container > button, #list-desc > button{
+    width:15vw;
+    height:4vh;
+    margin-top:2vh;
+    outline:none;
+    border:none;
+    background:lightgray;
+    border-radius:2vh;
+    cursor:pointer;
+    font-size:1.75vmin;
+    font-weight:300;
+    transition-duration:250ms;
+}
+
+#form-container > button:hover, #list-desc > button:hover{
+    background:var(--accent-color);
 }
 
 #list-container{
     width:65vw;
+    position:relative;
+    display:flex;
+    flex-direction:row;
 }
 
 .form-input{
@@ -269,4 +297,44 @@ body{
 ::-webkit-scrollbar-thumb {
     background-color: gray;
     width:1px;
+}
+
+#list-desc{
+    width:15vw;
+    height:70vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-right:3px solid lightgray;
+    padding-right:2.5vw;
+    margin-right:2.5vw;
+}
+
+#food-list{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+    width:45vw;
+    height:32.5vh;
+}
+
+#food-description{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+    width:45vw;
+    height:32.5vh;
+    margin-top:5vh;
+}
+
+#food-list > p{
+    background:lightgray;
+    padding:0.5vmax 1vmax;
+    font-size:1vmax;
+    border-radius:1vmax;
+    cursor:pointer;
+    margin:0 1.5vmin;
 }

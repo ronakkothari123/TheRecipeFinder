@@ -1,10 +1,9 @@
 const formInput = document.getElementById('form-input');
-const foodItems = ['onion', 'ketchup', 'mustard', 'ranch', 'patty', 'tomato', 'lettuce', 'spinach', 'paneer', 'bread', 'naan', 'pasta', 'marinara sauce', 'cucumber', 'chilli', 'cilantro', 'coriander', 'carrot', 'pickle', 'kale', 'apple', 'banana', 'orange', 'grape', 'pear', 'salt', 'pepper', 'sugar', 'potato', 'zucchini', 'cauliflower', 'flour'];
 
 let foodList = []
 
 function createItem(){
-    if(foodItems.includes(formInput.value.toLowerCase()) && !foodList.includes(formInput.value.toLowerCase())){
+    if(ingredients.includes(formInput.value.toLowerCase()) && !foodList.includes(formInput.value.toLowerCase())){
         let newP = document.createElement('p')
         const words = formInput.value.toLowerCase().split(" ")
         let final = ""
@@ -24,6 +23,24 @@ function createItem(){
         formInput.value = "";
     } else {
         formInput.value = "";
+    }
+}
+
+function searchFoods(){
+    let matches = []
+
+    for(let i = 0; i < foods.length; i++){
+        for(let j = 0; j < foods[i][1].length; j++){
+            if(foodList.includes(foods[i][1][j])){
+                matches.push(foods[i][1][j])
+            }
+        }
+
+        let newP = document.createElement('p');
+        newP.appendChild(document.createTextNode(foods[i][0] + " - " + (matches.length * 100 / foods[i][1].length).toFixed(1) + "% Match"))
+        document.getElementById('food-list').appendChild(newP);
+
+        matches = []
     }
 }
 
