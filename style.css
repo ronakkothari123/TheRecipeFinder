@@ -1,0 +1,104 @@
+:root{
+    --accent-color:#58D68D;
+}
+
+body{
+    margin:0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#navbar{
+    width:94vw;
+    height:10vh;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding:0 3vw;
+    position:relative;
+}
+
+#header-div{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+#header-div > img{
+    width:7vmin;
+}
+
+#headers{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-left:1vmin;
+}
+
+#headers > h1{
+    margin:0;
+    font-weight:900;
+    font-size:3.5vmin;
+}
+
+#headers > h2{
+    margin:-0.5vmin 0 0 0;
+    font-size:2vmin;
+    font-weight:300;
+}
+
+#navbar > input{
+    margin-left:1vw;
+    width:14vw;
+    height:2.5vh;
+    outline:none;
+    border:1px solid white;
+    background:lightgray;
+    border-radius:1vmin;
+    padding:0 0.5vw;
+    transition-duration:500ms;
+    font-size:1.375vh;
+    color:gray;
+}
+
+#navbar > input:focus{
+    border:1px solid gray;
+}
+
+.accent{
+    color:var(--accent-color)
+}
+
+#profile{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    position:absolute;
+    right:3vmin;
+}
+
+#pfp{
+    width:5vmin;
+}
+
+#pfp-dropdown{
+    width:3vmin;
+    margin-left:0.5vw;
+    cursor:pointer;
+}
+
+#profile-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-left:0.5vw;
+}
+
+#profile-text > h1{
+    font-size:2vmin;
+    margin:0;
+}
+
+#profile-text > p{
+    font-size:1.5vmin;
+    margin:0;
+}
