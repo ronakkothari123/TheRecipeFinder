@@ -6,6 +6,7 @@ function createItem(){
 
     if(formInput.value.slice(-3) == "ies"){
         formInput.value = formInput.value.substring(0, formInput.value.length - 3)
+        formInput.value += "y";
     }
 
     if(formInput.value.slice(-2) == "es"){

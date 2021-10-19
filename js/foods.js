@@ -11,8 +11,9 @@ var foods = [
     ["Butter Chicken", ["butter", "chicken"], ["butter", "chicken", "chilli", "spice", "tomato", "onion", "garlic", "ginger"], ["lunch", "dinner"]],
     ["Sandwich", ["bread"], ["tomato", "lettuce", "mustard", "ketchup", "butter", "onion", "cucumber", "salt", "potato", "coriander"], ["breakfast"]],
     ["Salad", ["lettuce"], ["lettuce", "spinach", "ranch", "cucmber", "carrot", "onion"], ["breakfast"]],
-    ["Apple Pie", ["apple"], ["apple", "sugar", "flour", "salt", "lemon", "cinnamon", "nutmeg"], ["breakfast"]],
+    ["Apple Pie", ["apple"], ["apple", "sugar", "flour", "salt", "lemon", "cinnamon", "nutmeg"], ["dessert"]],
     ["Roast Chicken", ["chicken"], ["lemon", "lime", "chicken", "garlic", "salt", "chilli", "pepper", "onion", "butter"], ["lunch", "dinner"]],
+    ["Ice Cream", ["vanilla", "milk"], ["vanilla", "milk", "salt"], ["dessert"]],
 ]
 
 // Template for new item
