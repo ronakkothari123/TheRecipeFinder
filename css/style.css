@@ -337,4 +337,12 @@ body{
     border-radius:1vmax;
     cursor:pointer;
     margin:0 1.5vmin;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+#food-list > p > img{
+    width:1.25vmax;
+    margin-right:0.5vmax;
 }

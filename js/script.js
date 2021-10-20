@@ -65,8 +65,12 @@ function searchFoods(){
 
         if(include){
             let newP = document.createElement('p');
-        newP.appendChild(document.createTextNode(foods[i][0] + " - " + (matches.length * 100 / foods[i][2].length).toFixed(1) + "% Match"))
-        myNode.appendChild(newP);
+            let newImage = document.createElement('img')
+            newImage.src = "./icons/foods/" + foods[i][4] + ".png"
+            console.log(newImage.src)
+            newP.appendChild(newImage)
+            newP.appendChild(document.createTextNode(foods[i][0] + " - " + (matches.length * 100 / foods[i][2].length).toFixed(1) + "% Match"))
+            myNode.appendChild(newP);
         }
 
         matches = []
