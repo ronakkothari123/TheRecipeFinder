@@ -99,6 +99,7 @@ var ingredients = [
     "sweet potato",
     "tofu",
     "tomato",
+    "tortilla",
     "tuna",
     "turkey",
     "turmeric",

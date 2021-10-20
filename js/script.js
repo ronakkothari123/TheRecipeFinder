@@ -1,6 +1,9 @@
 const formInput = document.getElementById('form-input');
 
-let foodList = []
+let foodList = [];
+let items = [];
+let matches = [];
+let include = false;
 
 function createItem(){
 
@@ -14,7 +17,9 @@ function createItem(){
     }
 
     if(formInput.value.slice(-1) == "s"){
-        formInput.value = formInput.value.substring(0, formInput.value.length - 1)
+        if(!formInput.value.slice(-2) == "ss"){
+            formInput.value = formInput.value.substring(0, formInput.value.length - 1)
+        }
     }
 
     if(ingredients.includes(formInput.value.toLowerCase()) && !foodList.includes(formInput.value.toLowerCase())){
@@ -40,40 +45,57 @@ function createItem(){
     }
 }
 
-function searchFoods(){
-    let matches = []
-    let include = false;
+function searchAlgReal(i){
+    for(let j = 0; j < foods[i][2].length; j++){
+        if(foodList.includes(foods[i][2][j])){
+            matches.push(foods[i][2][j])
+        }
+    }
 
+    include = true;
+    for(let j = 0; j < foods[i][1].length; j++){
+        if(!foodList.includes(foods[i][1][j])){
+            include = false;
+        }
+    }
+
+    if(include){
+        if(items.length == 0){
+            items.push([i,matches.length / foods[i][2].length])
+        } else {
+            for(let j = 0; j < items.length + 1; j++){
+                let matchAmount = matches.length / foods[i][2].length;
+                items.splice(j, 0, [i,matches.length / foods[i][2].length]);
+                return;
+            }
+        }
+    }
+
+    matches = []
+}
+
+function searchFoods(){
     const myNode = document.getElementById("food-list");
+
+    items = [];
+    matches = [];
+    include = true;
+
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
     }
 
     for(let i = 0; i < foods.length; i++){
-        for(let j = 0; j < foods[i][2].length; j++){
-            if(foodList.includes(foods[i][2][j])){
-                matches.push(foods[i][2][j])
-            }
-        }
+        searchAlgReal(i)
+    }
 
-        include = true;
-        for(let j = 0; j < foods[i][1].length; j++){
-            if(!foodList.includes(foods[i][1][j])){
-                include = false;
-            }
-        }
-
-        if(include){
-            let newP = document.createElement('p');
-            let newImage = document.createElement('img')
-            newImage.src = "./icons/foods/" + foods[i][4] + ".png"
-            console.log(newImage.src)
-            newP.appendChild(newImage)
-            newP.appendChild(document.createTextNode(foods[i][0] + " - " + (matches.length * 100 / foods[i][2].length).toFixed(1) + "% Match"))
-            myNode.appendChild(newP);
-        }
-
-        matches = []
+    for(let i = 0; i < items.length; i++){
+        let newP = document.createElement('p');
+        let newImage = document.createElement('img')
+        newImage.src = "./icons/foods/" + foods[items[i][0]][4] + ".png"
+        newP.appendChild(newImage)
+        newP.appendChild(document.createTextNode(foods[items[i][0]][0] + " - " + (items[i][1] * 100).toFixed(1) + "% Match"))
+        myNode.appendChild(newP);
     }
 }
 
