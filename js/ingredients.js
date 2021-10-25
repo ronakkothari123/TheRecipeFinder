@@ -1,4 +1,4 @@
-var ingredients = [
+const ingredients = [
     "almond",
     "apple",
     "asafoetida",

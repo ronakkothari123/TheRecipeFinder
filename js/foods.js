@@ -1,4 +1,4 @@
-var foods = [
+const foods = [
     ["Burger", ["bread", "patty"], ["bread", "cheese", "tomato", "patty", "ketchup", "mustard", "onion", "chilli", "pepper", "salt", "cheese"], ["breakfast"], 0],
     ["Pasta", ["pasta"], ["pasta", "marinara sauce", "salt", "pepper", "black pepper"], ["breakfast", "lunch"], 5],
     ["Chole Bhature", ["chickpea"], ["bhatura", "chickpea", "yogurt", "sugar", "baking soda", "salt", "oil", "tea", "cardamom", "cumin", "cinnamon", "onion", "ginger", "garlic", "chilli", "turmeric", "coriander", "spice", "butter", "ghee"], ["lunch", "dinner"], 4],
